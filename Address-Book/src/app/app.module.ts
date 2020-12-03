@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms';
+import { ContactDetailComponent } from './contact-detail/contact-detail.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactsComponent
+    ContactsComponent,
+    ContactDetailComponent
   ],
   imports: [
     BrowserModule,
