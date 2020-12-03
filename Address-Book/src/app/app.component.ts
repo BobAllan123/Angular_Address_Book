@@ -1,18 +1,24 @@
-import { Component } from '@angular/core';
-import { Contact } from '../contacts';
+import { Component, OnInit } from '@angular/core';
+import { Contact } from './contact';
+import { CONTACTS } from './mock-contacts';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
+  contacts = CONTACTS;
+  selectedContact: Contact;
 
-  title = 'Address-Book';
+  constructor() {};
   
-  contact: Contact = {
-    id: 1,
-    name: 'Windstorm'
+  ngOnInit() {};
+
+  onSelect(contact : Contact): void {
+    this.selectedContact = contact;
   }
   
 }
