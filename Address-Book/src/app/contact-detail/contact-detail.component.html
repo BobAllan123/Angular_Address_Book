@@ -1,6 +1,5 @@
 <div *ngIf="contact">
-  <h2>{{contact.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{contact.id}}</div>
+  <h2>{{contact.name}}'s Details</h2>
   <div>
     <label>name:
       <input [(ngModel)]="contact.name" placeholder="contact"/>
@@ -18,5 +17,5 @@
       <input [(ngModel)]="contact.phone" placeholder="contact"/>
     </label>
   </div>
-  <button (click)="goBack()">go back</button>
+  <button (click)="goBack()">Save and Go Back</button>
 </div>
