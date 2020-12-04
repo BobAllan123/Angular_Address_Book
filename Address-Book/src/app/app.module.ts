@@ -21,7 +21,12 @@ import { AddContactComponent } from './add-contact/add-contact.component';
     ContactDetailComponent,
     AddContactComponent,
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ 
+    AppComponent,
+    ContactsComponent,
+    ContactDetailComponent,
+    AddContactComponent,
+  ]
 })
 
 export class AppModule { }

@@ -8,6 +8,7 @@ import { ContactService } from '../contact.service';
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.css']
 })
+
 export class ContactsComponent implements OnInit {
   contacts: Contact[];
 
@@ -23,6 +24,6 @@ export class ContactsComponent implements OnInit {
   }
 
   addNewContact(): void {
-    
+
   }
 }
