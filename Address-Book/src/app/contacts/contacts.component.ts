@@ -21,4 +21,8 @@ export class ContactsComponent implements OnInit {
     this.contactService.getContacts()
     .subscribe(contacts => this.contacts = contacts);
   }
+
+  addNewContact(): void {
+    
+  }
 }
