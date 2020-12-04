@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Contact } from '../contact';
 import { ContactService } from '../contact.service';
 
 @Component({
-  selector: 'app-contacts',
-  templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: [ './dashboard.component.css' ]
 })
-export class ContactsComponent implements OnInit {
-  contacts: Contact[];
+export class DashboardComponent implements OnInit {
+  contacts: Contact[] = [];
 
   constructor(private contactService: ContactService) { }
 
@@ -19,6 +18,6 @@ export class ContactsComponent implements OnInit {
 
   getContacts(): void {
     this.contactService.getContacts()
-    .subscribe(contacts => this.contacts = contacts);
+      .subscribe(contacts => this.contacts = contacts.slice(1, 5));
   }
 }

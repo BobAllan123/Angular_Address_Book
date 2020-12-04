@@ -6,10 +6,7 @@ import { Contact } from './contact';
 import { CONTACTS } from './mock-contacts';
 import { MessageService } from './message.service';
 
-@Injectable({
-  providedIn: 'root'
-})
-
+@Injectable({ providedIn: 'root' })
 export class ContactService {
 
   constructor(private messageService: MessageService) { }
@@ -18,9 +15,13 @@ export class ContactService {
 
     this.messageService.add('ContactService: fetched contacts');
     return of(CONTACTS);
-  
   }
 
+  getContact(id: number): Observable<Contact> {
+
+    this.messageService.add(`ContactService: fetched contact id=${id}`);
+    return of(CONTACTS.find(contact => contact.id === id));
+  }
 }
 
 

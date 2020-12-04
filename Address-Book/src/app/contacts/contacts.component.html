@@ -1,1 +1,8 @@
-<p>contacts works!</p>
+<h2>My Contacts</h2>
+<ul class="contacts">
+  <li *ngFor="let contact of contacts">
+    <a routerLink="/detail/{{contact.id}}">
+      <span class="badge">{{contact.id}}</span> {{contact.name}}
+    </a>
+  </li>
+</ul>

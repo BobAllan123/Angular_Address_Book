@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
 
   contacts = CONTACTS;
   selectedContact: Contact;
+  title = "My Contacts";
 
   constructor() {};
   
