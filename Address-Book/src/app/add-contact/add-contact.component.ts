@@ -13,9 +13,18 @@ import { ContactService } from '../contact.service';
 
 export class AddContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private contactService: ContactService,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
+
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }
